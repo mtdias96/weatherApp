@@ -2,7 +2,7 @@ import HttpClient from './utils/HttpClient';
 
 class WeatherService {
   constructor() {
-    this.httpClient = new HttpClient('http://dataservice.accuweather.com/');
+    this.httpClient = new HttpClient('https://dataservice.accuweather.com/');
   }
 
   async getCityKey(city, APIKey) {
