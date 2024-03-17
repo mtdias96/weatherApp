@@ -36,27 +36,23 @@ export default function Home() {
   };
 
   const getDataWeather = async () => {
-    try {
-      const cityKeyValue = await WeatherService.getCityKey(city, APIKey);
-      const infosList = await WeatherService.listInfos(cityKeyValue, APIKey);
-      const probalityInfo = await WeatherService.probalityInfo(cityKeyValue, APIKey);
-      const citySearch = await WeatherService.getCityName(city, APIKey);
-      setSearch(citySearch[0].LocalizedName);
-      setWeatherText(infosList[0].WeatherText);
-      setTemperature(infosList[0].Temperature.Metric.Value);
-      setThermalSensation(infosList[0].RealFeelTemperature.Metric.Value);
-      setWindSpeed(infosList[0].Wind.Speed.Metric.Value);
-      setHumidity(infosList[0].RelativeHumidity);
-      setUVIndex(infosList[0].UVIndex);
-      setDate(infosList[0].LocalObservationDateTime);
-      setIsDay(infosList[0].IsDayTime);
-      setIconTemperature(infosList[0].WeatherIcon);
-      setProbability(probalityInfo.DailyForecasts[0].Day.RainProbability);
-      setTemperatureMin(probalityInfo.DailyForecasts[0].RealFeelTemperature.Minimum.Value);
-      setTemperatureMax(probalityInfo.DailyForecasts[0].RealFeelTemperature.Maximum.Value);
-    } catch (error) {
-      alert('Erro ao tentar acessar API');
-    }
+    const cityKeyValue = await WeatherService.getCityKey(city, APIKey);
+    const infosList = await WeatherService.listInfos(cityKeyValue, APIKey);
+    const probalityInfo = await WeatherService.probalityInfo(cityKeyValue, APIKey);
+    const citySearch = await WeatherService.getCityName(city, APIKey);
+    setSearch(citySearch[0].LocalizedName);
+    setWeatherText(infosList[0].WeatherText);
+    setTemperature(infosList[0].Temperature.Metric.Value);
+    setThermalSensation(infosList[0].RealFeelTemperature.Metric.Value);
+    setWindSpeed(infosList[0].Wind.Speed.Metric.Value);
+    setHumidity(infosList[0].RelativeHumidity);
+    setUVIndex(infosList[0].UVIndex);
+    setDate(infosList[0].LocalObservationDateTime);
+    setIsDay(infosList[0].IsDayTime);
+    setIconTemperature(infosList[0].WeatherIcon);
+    setProbability(probalityInfo.DailyForecasts[0].Day.RainProbability);
+    setTemperatureMin(probalityInfo.DailyForecasts[0].RealFeelTemperature.Minimum.Value);
+    setTemperatureMax(probalityInfo.DailyForecasts[0].RealFeelTemperature.Maximum.Value);
   };
 
   return (
