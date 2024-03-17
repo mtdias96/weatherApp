@@ -55,7 +55,7 @@ export default function Home() {
       setTemperatureMin(probalityInfo.DailyForecasts[0].RealFeelTemperature.Minimum.Value);
       setTemperatureMax(probalityInfo.DailyForecasts[0].RealFeelTemperature.Maximum.Value);
     } catch (error) {
-      console.log('error', error);
+      alert('Erro ao tentar acessar API');
     }
   };
 

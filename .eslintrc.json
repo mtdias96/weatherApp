@@ -18,6 +18,7 @@
     "react"
   ],
   "rules": {
+    "eslint-disable-next-line no-console": "off",
     "import/prefer-default-export": "off",
     "react/react-in-jsx-scope": "off",
     "react/jsx-filename-extension": [
