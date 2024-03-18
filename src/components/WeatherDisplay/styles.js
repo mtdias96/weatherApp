@@ -100,4 +100,9 @@ export const ImageWeather = styled.div`
   align-items:center;
   width: 160px;
   height: 160px;
+
+  img{
+    width: 100%;
+    width: 100%;
+  }
 `;

@@ -15,7 +15,7 @@ export default function WeatherDisplay({
   dateApi, isDay, icon = 1,
 }) {
   const date = format(new Date(dateApi), "dd 'de' MMMM 'de' yyyy", { locale: pt });
-  const time = format(new Date(dateApi), 'HH:mm:ss');
+  const time = format(new Date(dateApi), 'HH:mm');
   const iconTemp = iconMap[icon];
 
   return (

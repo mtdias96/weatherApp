@@ -12,21 +12,18 @@ export const Container = styled.section`
   align-items: center;
   flex-direction: column;
 
-  @media (max-width: 1211px) {
+  @media (min-width: 1211px) {
     gap: 54px;
+    height: 1200px;
   }
 `;
 
 export const InitialContent = styled.div`
-  margin-top: 6rem;
-  display: flex;
+  margin-top: 5rem;
   width: 31.5rem;
-  flex-direction: column;
-  align-items: center;
-  gap: 3.5rem;
 
   @media (max-width: 768px) {
-    margin-top: 10rem;
+    margin-top: 5rem;
     width: 90%;
     gap: 2rem;
   }
@@ -52,6 +49,7 @@ export const InitalContainerText = styled.div`
   font-size: 14px;
   font-weight: 400;
   line-height: 140%;
+  margin-bottom: 24px;
   }
 
   @media (min-width: 768px) {
@@ -84,6 +82,7 @@ align-items: center;
 export const ContainerInput = styled.div`
   position: relative;
   width: 100%;
+  margin-top: 34px;
 
   @media (max-width: 764px ) {
     width: 500px;

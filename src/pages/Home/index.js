@@ -40,6 +40,7 @@ export default function Home() {
     const infosList = await WeatherService.listInfos(cityKeyValue, APIKey);
     const probalityInfo = await WeatherService.probalityInfo(cityKeyValue, APIKey);
     const citySearch = await WeatherService.getCityName(city, APIKey);
+
     setSearch(citySearch[0].LocalizedName);
     setWeatherText(infosList[0].WeatherText);
     setTemperature(infosList[0].Temperature.Metric.Value);
@@ -78,7 +79,6 @@ export default function Home() {
           </button>
         </ContainerInput>
       </InitialContent>
-
       {date && (
         <ContainerWeather>
           <WeatherContainer>
@@ -105,7 +105,7 @@ export default function Home() {
           </WeatherContainerInfo>
         </ContainerWeather>
       )}
-
     </Container>
+
   );
 }
