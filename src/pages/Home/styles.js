@@ -3,7 +3,7 @@ import background from '../../assets/images/background/background.png';
 
 export const Container = styled.section`
   width: 100%;
-  height: 1500px;
+  height: 100vh;
   background: url(${background}), lightgray 50% / cover no-repeat;
   background-repeat: no-repeat;
   background-size:cover;
@@ -13,17 +13,21 @@ export const Container = styled.section`
   flex-direction: column;
 
   @media (min-width: 1211px) {
-    gap: 54px;
+    gap: 26px;
+  }
+  @media (max-width: 600px) {
     height: 1200px;
   }
 `;
 
 export const InitialContent = styled.div`
-  margin-top: 5rem;
   width: 31.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
   @media (max-width: 768px) {
-    margin-top: 5rem;
     width: 90%;
     gap: 2rem;
   }
@@ -106,22 +110,27 @@ export const ContainerInput = styled.div`
 `;
 
 export const WeatherContainerInfo = styled.section`
-display: flex;
-width: 335px;
-justify-content: center;
-align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
 
-@media (min-width: 563px) {
-  width: 432px;
-  height: 416px;
-}
-@media (min-width: 768px) {
-  width: 532px;
-  height: 416px;
-}
+    @media (min-width: 1213px) {
+      flex-direction: column;
+    }
+    @media (min-width: 563px) {
+      width: 432px;
+      height: 416px;
+    }
+    @media (min-width: 768px) {
+      width: 532px;
+      height: 416px;
+    }
 `;
 
 export const ContainerWeather = styled.div`
+  display: flex;
   @media (min-width: 1213px) {
     margin-top: 24px;
     width: 100%;
@@ -135,4 +144,12 @@ export const ContainerWeather = styled.div`
     flex-direction: column;
     gap: 54px;
   }
+`;
+
+export const WeatherContainerNextDays = styled.div`
+ @media (min-width: 1213px) {
+      flex-direction: column;
+    }
+    border-radius: 12px;
+    background: var(--Base-Gray-800, #16161F);
 `;

@@ -13,6 +13,5 @@ export default {
       200: '#BFBFD4',
       100: '#FAFAFA',
     },
-
   },
 };
