@@ -20,6 +20,10 @@ class WeatherService {
   async probalityInfo(cityKey, APIKey) {
     return this.httpClient.getInfos(`/forecasts/v1/daily/1day/${cityKey}?apikey=${APIKey}&language=pt-br&details=true&metric=true`);
   }
+
+  async probalityNext5Days(cityKey, APIKey) {
+    return this.httpClient.getInfos(`/forecasts/v1/daily/5day/${cityKey}?apikey=${APIKey}&language=pt-br&details=true&metric=true`);
+  }
 }
 
 export default new WeatherService();

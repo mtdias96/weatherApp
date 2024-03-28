@@ -13,6 +13,12 @@ export default function Card({ image, infoName, infoWeather }) {
 
 Card.propTypes = {
   image: PropTypes.string.isRequired,
-  infoName: PropTypes.string.isRequired,
-  infoWeather: PropTypes.string.isRequired,
+  infoWeather: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+  ]).isRequired,
+  infoName: PropTypes.string,
+};
+Card.defaultProps = {
+  infoName: 'Nome não disponível',
 };

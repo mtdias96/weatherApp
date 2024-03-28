@@ -3,20 +3,19 @@ import background from '../../assets/images/background/background.png';
 
 export const Container = styled.section`
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  padding-bottom: 32px;
   background: url(${background}), lightgray 50% / cover no-repeat;
-  background-repeat: no-repeat;
-  background-size:cover;
+  background-size: cover;
   display: flex;
-  gap: 50px;
   align-items: center;
   flex-direction: column;
+  gap: 48px;
+`;
 
-  @media (min-width: 1211px) {
-    gap: 26px;
-  }
-  @media (max-width: 600px) {
-    height: 1200px;
+export const CardContainer = styled.div`
+  @media (min-width: 1217px) {
+    flex-direction: column;
   }
 `;
 
