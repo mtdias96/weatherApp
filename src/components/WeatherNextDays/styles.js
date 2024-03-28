@@ -13,6 +13,7 @@ export const Container = styled.section`
   align-self: stretch;
   border-radius: 18px;
   background: var(--Base-Gray-800, #16161F);
+
 `;
 
 export const CardContainer = styled.div`
@@ -24,10 +25,18 @@ export const CardContainer = styled.div`
     flex-direction: column;
     gap: 16px;
     border-bottom: none;
+    order: 1;
 
     img{
       width: 56px;
       height: 56px;
+      order: 3;
+    }
+    p{
+      order: 1;
+    }
+    span{
+      order: 3;
     }
   }
 

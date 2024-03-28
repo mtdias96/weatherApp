@@ -1,4 +1,5 @@
 import icon1 from '../assets/images/icons/1.png';
+import icon12 from '../assets/images/icons/12.png';
 import icon13 from '../assets/images/icons/13.png';
 import icon14 from '../assets/images/icons/14.png';
 import icon15 from '../assets/images/icons/15.png';
@@ -36,6 +37,7 @@ const iconMap = {
   6: icon6,
   7: icon7,
   8: icon8,
+  12: icon12,
   13: icon13,
   14: icon14,
   15: icon15,
