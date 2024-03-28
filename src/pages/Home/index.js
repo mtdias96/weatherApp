@@ -35,7 +35,6 @@ export default function Home() {
   const [iconTemperature, setIconTemperature] = useState(0);
   const [APIKey] = useState('Ef1BbIGZze1E3A63TuGTijtDxTBAcP1w');
   const [isLoading, setIsLoading] = useState(false);
-  const [isNextDays, setIsNextDays] = useState([]);
 
   const handleCityName = (event) => {
     setCity(event.target.value);
@@ -48,7 +47,6 @@ export default function Home() {
       const infosList = await WeatherService.listInfos(cityKeyValue, APIKey);
       const probalityInfo = await WeatherService.probalityInfo(cityKeyValue, APIKey);
       const citySearch = await WeatherService.getCityName(city, APIKey);
-      const next5Days = await WeatherService.probalityNext5Days(cityKeyValue, APIKey);
 
       setSearch(citySearch[0].LocalizedName);
       setWeatherText(infosList[0].WeatherText);
@@ -63,13 +61,11 @@ export default function Home() {
       setProbability(probalityInfo.DailyForecasts[0].Day.RainProbability);
       setTemperatureMin(probalityInfo.DailyForecasts[0].RealFeelTemperature.Minimum.Value);
       setTemperatureMax(probalityInfo.DailyForecasts[0].RealFeelTemperature.Maximum.Value);
-      setIsNextDays(next5Days);
     } catch {
       throw new Error();
     } finally {
       setIsLoading(false);
     }
-    console.log(isNextDays);
   };
 
   return (
